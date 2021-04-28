@@ -4,25 +4,49 @@
     <link rel="stylesheet" href="./css/levelone.css" />
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
-    <div>
-      <button id="gogo">LET'S GO</button>
-    </div>
-    <div>
-      <img src="./css/img/noun_monkey_3063330.svg" />
-      <p>Monkey said ...</p>
-      <p id="reponse"></p>
-    </div>
 
-    <div>
-      <p id="array">Numbers already given :</p>
-    </div>
+  <body id="body">
+    <section id="gameover" class="gameover hidden">
+      <div>
+        <p>GAME OVER</p>
+        <p><a href="./levelone.html"> > wanna try again? yes please ! </a></p>
+        <p>
+          <a href="./index.html"
+            >> no, this game is stupid !(said the sore loser)</a
+          >
+        </p>
+      </div>
+    </section>
 
-    <div >
-      <section id="response">
-        <p>It's your turn :</p>
-        <input type="number" id="input" placeholder="Enter a number" />
-      </section>
-    </div>
+    <section id="yourturn" class="gameover">
+      <div>
+        <button id="startgame">LET'S GO</button>
+        <p>> You start the game, pay attention to the timer ;)</p>
+      </div>
+    </section>
+
+    <section id="computer">
+      <div>
+        <img src="./css/img/noun_monkey_3063330.svg" />
+        <p id="monkeyblabla">Please go ahead :)</p>
+        <p id="reponse"></p>
+      </div>
+      <div>
+        <p id="array">Numbers already given :</p>
+      </div>
+    </section>
+
+    <section id="player">
+      <div id="field">
+        <section id="response">
+          <p id="whosturn">It's your turn :</p>
+          <input id="input" type="number" placeholder="Your number 1 > 10" />
+        </section>
+      </div>
+
+      <div>
+        <p>Time left :<span id="chrono">60</span></p>
+      </div>
+    </section>
   </body>
 </html>

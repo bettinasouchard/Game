@@ -7,14 +7,32 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "poppins";
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+main{
+    height: 100vh;
+    background-image: url;
 }
 
 body{
     background-color: rgb(255, 255, 255);
-    background-image: url("./img/Vector\ 1.png");
-    object-fit: cover;
+    background-image: url("./img/Vector.svg"), url("./img/feuilles.svg") ;
+    object-fit: fill;
     background-repeat: no-repeat;
-    background-position: right 35% bottom 45%;
+    background-position: right 20% ;
+}
+
+#main a:visited{
+    color: black;
+}
+
+#main a:hover{
+    color: blanchedalmond;
 }
 
 #welcome{
@@ -58,15 +76,66 @@ body{
 }
 
 #letsGo{
+    transform: rotate(4deg);
     border: none;
     padding: 20px 30px;
     margin-top: 30px;
+    margin-bottom: 20vh;
     box-shadow: 2px 5px 40px  rgb(227, 252, 220);
     border-radius: 10px;
-    background-color:  rgb(255, 255, 255);
+    background-color:  #2aff71;
     
 }
 
-#letsGo a{
+a{
     text-decoration: none;
 } 
+
+/* ------------------------------- LEVELS ----------------------- */
+
+#levels{
+    height: 100vh;
+}
+
+#levels a{
+    color: black;
+}
+
+#levels a:visited{
+    color: black;
+}
+
+#levels a:hover{
+    color: rgb(42, 255, 113);
+}
+
+.plus{
+ font-size: 30px;
+ text-align: start;
+ padding-left: 40px;
+ padding-top: 20px;
+}
+
+.boxes{
+    padding: 20px;
+    box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px; 
+}
+
+.levels{
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 25% 100px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    margin: auto 0;
+    justify-content: center;
+    
+}
+
+.boxes p {
+    font-family: "Alex Brush";
+    font-size: 30px;
+}

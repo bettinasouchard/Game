@@ -8,23 +8,63 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./indexaccueil.js"></script>
   </head>
+
   <body>
-    <section id="hi">
-      <p id="welcome">Welcome to</p>
-      <h1 class="nameGame">MindFudge</h1>
-      <div id="cartouche">
+    <div id="main">
+      <section id="hi">
+        <p id="welcome">Welcome to</p>
+        <h1 class="nameGame">MindFudge</h1>
+        <div id="cartouche">
           <p>LES REGLES</p>
           <p>
-            Ici, tu joue contre un boot.<br>
-            Tu dois le battre à chaque niveau pour gagner le jeu.<br>
-            1. Il donne un chiffre entre 1 et 10.<br> 
-            2. Tu donnes un autre chiffre entre 1 et 10.<br>
+            Ici, tu joue contre un boot.<br />
+            Tu dois le battre à chaque niveau pour gagner le jeu.<br />
+            Le premier Level va de 1 à 10.<br />
+            1. Le boot donne un chiffre entre 1 et 10.<br />
+            2. Tu donnes un autre chiffre entre 1 et 10.<br />
             Si tu répete un chiffre déjà donné par le boot ou toi, tu perds.
           </p>
-      </div>
-    </section>
-    <button id="letsGo"><a href="./levels.html">LET'S GO!</a></button>
+        </div>
+      </section>
+      <button id="letsGo"><a href="#levels">LET'S GO!</a></button>
+    </div>
 
-    
+    <!-- LEVELS -->
+
+    <div id="levels">
+      <nav id="options">
+        <h2 class="nameGame plus">MindFudge</h2>
+      </nav>
+
+        <section class="levels">
+
+          <div class="boxes">
+            <p>Easy peasy</p>
+            <a href="./levelone.html">0 à 10</a>
+          </div>
+
+          <div class="boxes">
+            <p>Not that hard</p>
+            <a href="./levelone.html">0 à 20</a>
+          </div>
+
+          <div class="boxes">
+            <p>Starting to get tricky</p>
+            <a href="./levelone.html">0 à 30</a>
+          </div>
+
+          <div class="boxes">
+            <p>Hum...</p>
+            <a href="./levelone.html">0 à 40</a>
+          </div>
+
+          <div class="boxes">
+            <p>No comment</p>
+            <a href="./levelone.html">0 à 50</a>
+          </div>
+
+        </section>
+     
+    </div>
   </body>
 </html>

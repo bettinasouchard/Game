@@ -3,13 +3,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/*html{
+  background-image: url("./img/fondforet.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
 body {
+  
   background-color: rgb(255, 255, 255);
   text-align: center;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: "poppins";
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin: 50px;
+}
+
+
+#computer {
+  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  padding: 100px;
+  border-radius: 10px;
+}
+
+#player{
+  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  padding: 100px;
+  border-radius: 10px;
 }
 
 img {
@@ -29,4 +52,23 @@ img {
     width: 40px;
     margin: 30px;
     border: solid 1px;
+}
+
+.gameover {
+  z-index: 3;
+  position: fixed;
+  margin-left: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  padding: 250px;
+  border-radius: 10px;
+}
+
+.hidden{
+  visibility: hidden;}
+
+#yourturn{
+  background-image: url("./img/fondforet.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
