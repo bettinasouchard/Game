@@ -19,7 +19,6 @@ main{
 body{
     background-color: rgb(255, 255, 255);
     background-image: url("./img/Vector.svg"), url("./img/welcome.jpg") ;
-    object-fit: fill;
     background-repeat: no-repeat;
     background-position: right 20%;
     background-size: cover;
@@ -49,7 +48,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 #cartouche{
@@ -78,12 +77,13 @@ body{
     border: none;
     padding: 20px 30px;
     margin-top: 30px;
-    margin-bottom: 20vh;
     box-shadow: 2px 5px 40px  rgb(227, 252, 220);
     border-radius: 10px;
     background-color:  #2aff71;
-    
+    font-weight: 800;
+    font-size: 30px;
 }
+
 
 a{
     text-decoration: none;
