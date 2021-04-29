@@ -10,7 +10,9 @@
 }*/
 
 body {
-  
+  background-image: url("./img/Jungle.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: rgb(255, 255, 255);
   text-align: center;
   box-sizing: border-box;
@@ -19,12 +21,14 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: center;
-  margin: 50px;
+  margin: 0;
+
 }
 
 
 #computer {
   box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  background-color: white;
   padding: 100px;
   border-radius: 10px;
 }
@@ -33,6 +37,7 @@ body {
   box-shadow: 2px 5px 40px  rgb(230, 230, 230);
   padding: 100px;
   border-radius: 10px;
+  background-color: white;
 }
 
 img {
@@ -57,18 +62,115 @@ img {
 .gameover {
   z-index: 3;
   position: fixed;
-  margin-left: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  box-shadow: 2px 5px 40px  #daf7da;
   padding: 250px;
   border-radius: 10px;
 }
 
 .hidden{
-  visibility: hidden;}
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 0.5s linear;
+}
 
 #yourturn{
-  background-image: url("./img/fondforet.svg");
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  margin: -10px;
+  display: flex;
+  flex-flow: row wrap;  
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  background-image: url("./img/Vector.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+
+}
+
+
+
+/* ------------------------------- LEVELS ----------------------- */
+
+#levels{
+  height: 100vh;
+}
+
+#levels a{
+  color: black;
+}
+
+#levels a:visited{
+  color: black;
+}
+
+#levels a:hover{
+  color: rgb(42, 255, 113);
+}
+
+.plus{
+font-size: 30px;
+text-align: start;
+padding-left: 40px;
+padding-top: 20px;
+}
+
+.boxes{
+  background-image: none;
+  padding: 20px;
+  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+  width: 300px;
+  height: 150px;
+  margin: 30px;
+  border-radius: 10px; 
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boxes p {
+  font-family: "Alex Brush";
+  font-size: 30px;
+  margin: 0;
+}
+
+#timer {
+  position: fixed;
+  right: 30px;
+  transform: rotate(-4deg);
+  background-color: white;
+  top: 30px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.startgame{
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid black 0.5px;
+  width: fit-content;
+}
+
+.startgame:hover{
+  background-color: black;
+  color: white;
+}
+
+#niveau{
+  z-index: 7;
+  font-size: 25px;
+  font-weight: 800;
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+  margin: 0 auto;
 }

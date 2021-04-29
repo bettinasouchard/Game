@@ -10,21 +10,19 @@
     font-family: "poppins";
 }
 
-html {
-    scroll-behavior: smooth;
-  }
 
 main{
     height: 100vh;
-    background-image: url;
+    width: 100vw;
 }
 
 body{
     background-color: rgb(255, 255, 255);
-    background-image: url("./img/Vector.svg"), url("./img/feuilles.svg") ;
+    background-image: url("./img/Vector.svg"), url("./img/welcome.jpg") ;
     object-fit: fill;
     background-repeat: no-repeat;
-    background-position: right 20% ;
+    background-position: right 20%;
+    background-size: cover;
 }
 
 #main a:visited{
@@ -90,52 +88,3 @@ body{
 a{
     text-decoration: none;
 } 
-
-/* ------------------------------- LEVELS ----------------------- */
-
-#levels{
-    height: 100vh;
-}
-
-#levels a{
-    color: black;
-}
-
-#levels a:visited{
-    color: black;
-}
-
-#levels a:hover{
-    color: rgb(42, 255, 113);
-}
-
-.plus{
- font-size: 30px;
- text-align: start;
- padding-left: 40px;
- padding-top: 20px;
-}
-
-.boxes{
-    padding: 20px;
-    box-shadow: 2px 5px 40px  rgb(230, 230, 230);
-    width: 300px;
-    margin: 20px;
-    border-radius: 10px; 
-}
-
-.levels{
-    grid-template-columns: 40px 50px auto 50px 40px;
-    grid-template-rows: 25% 100px auto;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    margin: auto 0;
-    justify-content: center;
-    
-}
-
-.boxes p {
-    font-family: "Alex Brush";
-    font-size: 30px;
-}

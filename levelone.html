@@ -18,21 +18,53 @@
       </div>
     </section>
 
-    <section id="yourturn" class="gameover">
+    <div id="niveau">
+      <p>Levels</p>
+    </div>
+    
+    <section id="yourturn">
+      <div class="boxes one">
+        <p>Easy peasy</p>
+        <button id="10" class="startgame">0 à 10</button>
+      </div>
+
+      <div class="boxes two">
+        <p>Not that hard</p>
+        <button id="20" class="startgame">0 à 20</button>
+      </div>
+
+      <div class="boxes three">
+        <p>Starting to get tricky</p>
+        <button id="30" class="startgame">0 à 30</button>
+      </div>
+
+      <div class="boxes">
+        <p>Hum...</p>
+        <button id="40" class="startgame">0 à 40</button>
+      </div>
+
+      <div class="boxes">
+        <p>No comment</p>
+        <button id="50" class="startgame">0 à 50</button>
+      </div>
+    </section>
+
+    <section id="win" class="gameover hidden">
       <div>
-        <button id="startgame">LET'S GO</button>
-        <p>> You start the game, pay attention to the timer ;)</p>
+        <p>YOU WON<br />> Next level ?</p>
+        <button>> Yes</button>
+        <button>> No</button>
       </div>
     </section>
 
     <section id="computer">
       <div>
-        <img src="./css/img/noun_monkey_3063330.svg" />
+        <!--<img src="./css/img/noun_monkey_3063330.svg" />-->
         <p id="monkeyblabla">Please go ahead :)</p>
         <p id="reponse"></p>
       </div>
       <div>
-        <p id="array">Numbers already given :</p>
+        <p id="array" class="hidden">Numbers already given :</p>
       </div>
     </section>
 
@@ -40,13 +72,16 @@
       <div id="field">
         <section id="response">
           <p id="whosturn">It's your turn :</p>
-          <input id="input" type="number" placeholder="Your number 1 > 10" />
+          <input id="input" type="number" placeholder="" />
+          <p id="warning" class="hidden">
+            Wrong input ! Chose a number between 1 and 10
+          </p>
         </section>
       </div>
-
-      <div>
-        <p>Time left :<span id="chrono">60</span></p>
-      </div>
     </section>
+
+    <div id="timer">
+      <p>Time left :<span id="chrono">60</span></p>
+    </div>
   </body>
 </html>
