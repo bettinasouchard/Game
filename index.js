@@ -35,7 +35,7 @@ const resetUserInput = () => (input.value = "");
 
 function doStuffAfterUserInput() {
   attention.classList.add("hidden");
-  whosturn.innerHTML = "It's now the monkey's turn :";
+  whosturn.innerHTML = "It's now the Mr Bot's turn :";
   // 1.input vierge
   resetUserInput();
   // 2.timer remis à zéro
@@ -53,7 +53,7 @@ function doStuffAfterUserInput() {
 /* . Ordi sors un CHIFFRE APRES X TEMPS*/
 
 function doComputerPickAfterXtime() {
-  monkey.innerHTML = "Monkey is thinking ...";
+  monkey.innerHTML = "Mr Bot is thinking ...";
   const timeoutId = setTimeout(function () {
     randomvariable();
     clearTimeout(timeoutId);
@@ -107,7 +107,7 @@ function randomvariable() {
     if (!array.includes(randomNum)) {
       array.push(randomNum);
       setTimeout(function () {
-        monkey.innerHTML = "Monkey is done for now";
+        monkey.innerHTML = "Mr Bot is done for now";
         reponse.innerHTML = "";
       }, 2000);
     } else if (array.includes(randomNum)) {
@@ -169,6 +169,7 @@ function startGame(number) {
 }
 
 function nextLevel() {
+
   startGame((level + 10))
 }
 
@@ -193,7 +194,7 @@ function win() {
     setTimeout(function () {
     resetUserInput();
     youwon.classList.remove("hidden")}, 2000);
-    
+    nextLevel();
   }}
   
   
