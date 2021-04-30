@@ -11,10 +11,14 @@
     <section id="gameover" class="gameover hidden">
       <div>
         <p>GAME OVER</p>
-        <p><a href="./levelone.html"> > wanna try again? yes please ! </a></p>
+        <p>
+          <a href="./levelone.html">
+            > wanna try again? <br />(maybe change level too ..)
+          </a>
+        </p>
         <p>
           <a href="./index.html">
-            > no, this game is stupid !(said the sore loser)</a
+            > no, this game is stupid ! <br />(said the sore loser)</a
           >
         </p>
       </div>
@@ -27,27 +31,27 @@
         <p>Levels</p>
       </div>
       <section id="interne">
-        <div class="boxes one">
+        <div class="boxes">
           <p>Easy peasy</p>
           <button id="10" class="startgame">0 to 10</button>
         </div>
 
-        <div class="boxes two">
+        <div class="boxes">
           <p>Not that hard</p>
           <button id="20" class="startgame">0 to 20</button>
         </div>
 
-        <div class="boxes three">
+        <div class="boxes">
           <p>Starting to get tricky</p>
           <button id="30" class="startgame">0 to 30</button>
         </div>
 
-        <div class="boxes for">
+        <div class="boxes">
           <p>Hum...</p>
           <button id="40" class="startgame">0 to 40</button>
         </div>
 
-        <div class="boxes five">
+        <div class="boxes">
           <p>No comment</p>
           <button id="50" class="startgame">0 to 50</button>
         </div>
@@ -58,17 +62,19 @@
 
     <section id="win" class="gameover hidden">
       <div>
-        <p>YOU WON<br />> Next level ?</p>
-        <button>> Yes</button>
-        <button>> No</button>
+        <p>YOU WON !!<br />> Chose another <br />level ?</p>
+        <button class="butbis"><a href="./levelone.html">> Yes</a></button>
+        <button class="butbis"><a href="./index.html">> No </a></button>
       </div>
     </section>
 
     <!--______________________GAME_____________________-->
     <div id="jeu">
+      <div id="intitule"><p></p></div>
+
       <section id="computer">
         <div>
-          <p id="monkeyblabla">Please go ahead :)</p>
+          <p id="monkeyblabla">Please go ahead ...</p>
           <p id="reponse"></p>
         </div>
         <div>
@@ -82,7 +88,8 @@
             <p id="whosturn">It's your turn :</p>
             <input id="input" type="number" placeholder="" />
             <p id="warning" class="hidden">
-              Wrong input ! Chose a number between 1 and 10
+              Wrong input !<br />
+              Pick a number <br>between 1 and 10.
             </p>
           </section>
         </div>

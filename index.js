@@ -1,3 +1,23 @@
+/*--------------------------------------------------------------------------------*/
+/*---------     STORAGE USER / NIVEAUX GAGNES PAS FAITS :(     -------------------*/
+/*---------          Do it when lab game is over     -----------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------*/
+/*---------------------     CHANGEMENT DE FOND  :(     ---------------------------*/
+/*-------------          Do it when lab game is over     -------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*
+ function fond () {
+  let fond = document.getElementsById("body");
+
+  if (level = 20) { 
+  fond.classList.add("bodyvingt");
+  }
+ }
+*/
+/*-------------------------------------------------------------------------------*/
+
 let input = document.getElementById("input"); // input zone
 let secondes = document.getElementById("chrono").innerHTML; //30
 let whosturn = document.getElementById("whosturn");
@@ -6,16 +26,6 @@ let timeoutId;
 let array = [];
 
 let level = 0;
-
-/* 
-
-
-
-let levels = 0;
-let minmax = [{min:1, max:11},{min:1, max:21},{min:1, max:31},{min:1, max:41},{min:1, max:51}]
-
-*/
-
 
 /*--------------------------------------------------------------------------------*/
 /* . Ordi sors un NOMBRE AU HASARD entre x et x*/
@@ -35,7 +45,7 @@ const resetUserInput = () => (input.value = "");
 
 function doStuffAfterUserInput() {
   attention.classList.add("hidden");
-  whosturn.innerHTML = "It's now the Mr Bot's turn :";
+  whosturn.innerHTML = "Mr Bot's playing ..";
   // 1.input vierge
   resetUserInput();
   // 2.timer remis à zéro
@@ -44,9 +54,9 @@ function doStuffAfterUserInput() {
   doComputerPickAfterXtime();
   // 4.start timer
   setTimeout(function () {
-    whosturn.innerHTML = "It's now your turn :";
+    whosturn.innerHTML = "It's your turn :";
     startTimer();
-  }, 3500);
+  }, 3000);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -71,7 +81,6 @@ const checkKeyCode = (evt) => {
 /* . Si chiffre player OK > push dans array /SINON gameover+ stop timer*/
 
 function inputPlayer(nextStepsCallback) {
-
   if (array.length <= level) {
     if (
       isNaN(parseInt(input.value)) ||
@@ -84,7 +93,7 @@ function inputPlayer(nextStepsCallback) {
       document.getElementById("array").innerHTML +=
         "<li>" + input.value + "</li>";
       nextStepsCallback();
-    } else if ((array.includes(parseInt(input.value)))) {
+    } else if (array.includes(parseInt(input.value))) {
       stopTimer();
       return gameOver();
     }
@@ -101,7 +110,7 @@ let reponse = document.getElementById("reponse"); // <p>Monkey said ...</p> <p I
 visibleArray.style.display = "none";
 
 function randomvariable() {
-  let randomNum = nombreHasard(1, (level + 1));
+  let randomNum = nombreHasard(1, level + 1);
 
   if (array.length <= level) {
     if (!array.includes(randomNum)) {
@@ -113,9 +122,10 @@ function randomvariable() {
     } else if (array.includes(randomNum)) {
       return randomvariable();
     }
-  
-  visibleArray.innerHTML += "<li>" + randomNum + "</li>";
-  reponse.innerHTML = randomNum;}
+
+    visibleArray.innerHTML += "<li>" + randomNum + "</li>";
+    reponse.innerHTML = randomNum;
+  }
   win();
 }
 
@@ -152,26 +162,35 @@ function gameOver() {
 }
 
 /*--------------------------------------------------------------------------------*/
-// Retire hidden, montre cadre avec option retry ou quit
+// MAGIC *' (pour chaque bouton avec cette cat, onclick, startGame avec l'id en argument 20/30...)
 
 let levelBtns = document.querySelectorAll(".startgame");
-levelBtns.forEach(btn => {
+levelBtns.forEach((btn) => {
   btn.addEventListener("click", () => startGame(Number(btn.id)));
-})
+});
 
 let carddisappear = document.getElementById("yourturn");
 
 function startGame(number) {
+  // level déclaré au début et = 0
   level = number;
-  input.placeholder = `Between 1 and ${level}`
+
+  let togle = document.getElementById("yourturn");
+  togle.style.display = "none";
+
+  let intitu = document.getElementById("intitule");
+  intitu.innerHTML += `From 1 to ${level}`;
+
+  input.placeholder = `Between 1 and ${level}`;
+
   carddisappear.classList.add("hidden");
+
   startTimer();
 }
 
-function nextLevel() {
-
-  startGame((level + 10))
-}
+/*function nextLevel() {
+startGame((level + 10));
+} */
 
 /*--------------------------------------------------------------------------------*/
 // Warning
@@ -189,12 +208,12 @@ function warning() {
 let youwon = document.getElementById("win");
 
 function win() {
-  if(array.length === level){
+  if (array.length === level) {
+    gamedone.style.display = "none";
     stopTimer();
     setTimeout(function () {
-    resetUserInput();
-    youwon.classList.remove("hidden")}, 2000);
-    nextLevel();
-  }}
-  
-  
+      resetUserInput();
+      youwon.classList.remove("hidden");
+    }, 1000);
+  }
+}

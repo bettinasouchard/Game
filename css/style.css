@@ -1,90 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "poppins";
+* {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
 }
 
-
-main{
-    height: 100vh;
-    width: 100vw;
+main {
+  height: 100vh;
+  width: 100vw;
 }
 
-body{
-    background-color: rgb(255, 255, 255);
-    background-image: url("./img/Vector.svg"), url("./img/welcome.jpg") ;
-    background-repeat: no-repeat;
-    background-position: right 20%;
-    background-size: cover;
+body {
+  background-color: rgb(255, 255, 255);
+  background-image: url("./img/Vector.svg"), url("./img/welcome.jpg");
+  background-repeat: no-repeat;
+  background-position: right 20%;
+  background-size: cover;
 }
 
-#main a:visited{
-    color: black;
+/* BUTTON LINK ----------------------------------------- */
+
+a {
+  text-decoration: none;
 }
 
-#main a:hover{
-    color: blanchedalmond;
+a:visited {
+  color: black;
 }
 
-#welcome{
-    font-family: "Alex Brush";
-    font-size: 65px;
+a:hover {
+  color: blanchedalmond;
 }
 
-.nameGame{
-    font-family: "Abril Fatface";
-    font-size: 95px;
-    margin-bottom: 50px;
+/* WELCOME TO TEXT ----------------------------------------- */
+
+#welcome {
+  font-family: "Alex Brush";
+  font-size: 50px;
+  margin-top: 60px;
 }
 
-#hi{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-top: 70px;
+/* MINDFUDGE TEXT----------------------------------------- */
+
+.nameGame {
+  font-family: "Abril Fatface";
+  font-size: 85px;
+  margin-bottom: 60px;
+  margin-top: -20px;
 }
 
-#cartouche{
-    font-family: "Poppins";
-    width: fit-content;
-    padding: 50px;
-    margin: 0 auto;
-    box-shadow: 2px 5px 40px  rgb(227, 252, 220);
-    border-radius: 10px;
-    transform: rotate(-4deg);
-    line-height: 16px;
-    background-color: rgb(255, 255, 255);
+/* SECTION ----------------------------------------- */
+
+#hi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
 }
 
-#cartouche p{
-    padding: 10px;
+/* RECTANGLE INFOS ----------------------------------------- */
+
+#cartouche {
+  font-family: "Poppins";
+  width: fit-content;
+  padding: 50px;
+  margin: 0 auto;
+  box-shadow: 2px 5px 40px rgb(227, 252, 220);
+  border-radius: 10px;
+  transform: rotate(-4deg);
+  line-height: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
-#cartouche p:first-child{
-    font-size: 25px;
-    font-weight: 800;
+#cartouche p {
+  padding: 10px;
 }
 
-#letsGo{
-    transform: rotate(4deg);
-    border: none;
-    padding: 20px 30px;
-    margin-top: 30px;
-    box-shadow: 2px 5px 40px  rgb(227, 252, 220);
-    border-radius: 10px;
-    background-color:  #2aff71;
-    font-weight: 800;
-    font-size: 30px;
+#cartouche p:first-child {
+  font-size: 25px;
+  font-weight: 800;
 }
 
+/* BOUTON VERT ----------------------------------------- */
 
-a{
-    text-decoration: none;
-} 
+#letsGo {
+  transform: rotate(4deg);
+  border: none;
+  padding: 20px 30px;
+  margin-top: 0px;
+  box-shadow: 2px 5px 40px rgb(227, 252, 220);
+  border-radius: 10px;
+  background-color: #2aff71;
+  font-weight: 700;
+  font-size: 20px;
+}

@@ -1,14 +1,14 @@
-/* level one */
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-body {
-  background-image: url("./img/bgauchelevel.svg"), url("./img/bdlevel.svg"), url("./img/hglevel.svg"), url("./img/fondlevel.svg");
+#body {
+  background-image: url("./img/bgauchelevel.svg"), url("./img/bdlevel.svg"),
+    url("./img/hglevel.svg"), url("./img/fondlevel.svg");
   background-repeat: no-repeat;
-  background-size: 30%,40%,40%,100%;
-  background-position: left -30px bottom -10px, right bottom -10px, top left,center;
+  background-size: 30%, 40%, 40%, 100%;
+  background-position: left -30px bottom -10px, right bottom -10px, top left,
+    center;
   min-height: 100vh;
   text-align: center;
   box-sizing: border-box;
@@ -20,101 +20,51 @@ body {
   margin: 0;
 }
 
-
-
-.response{
-    margin: 30px;
-}
-
-.response input{
-    border: solid 1px;
-    height: 20px;
-}
-
-#go{
-    width: 40px;
-    margin: 30px;
-    border: solid 1px;
-}
-
-.gameover {
-  z-index: 3;
-  position: fixed;
-  
-  transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
-  box-shadow: 2px 5px 40px  #daf7da;
-  padding: 250px;
-  border-radius: 10px;
-}
-
-.hidden{
+.hidden {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 1s, opacity 0.5s linear;
 }
 
-#yourturn{
-  z-index: 5;
-  width: 100%;
-  min-height: 100%;
-  background-color: white;
-  position: absolute;
-  background-image: url("./img/Vector.svg"), url("./img/basdroite.svg"), url("./img/hautgauche.svg"), url("./img/basgauche.svg") ;
-  background-size: 90%, 20vw, 40vw, 10vw; 
-  background-repeat: no-repeat;
-  background-position: center, right -50px bottom -50px, left -80px top -80px, left -20px bottom -30px;
+a {
+  text-decoration: none;
 }
 
-#interne{
-  display: flex;
-  flex-flow: row wrap;  
-  justify-content: center;
-  margin: 20px;
-  gap: 30px;
-  min-height: 500px;
+a:visited {
+  color: black;
 }
 
+a:hover {
+  color: #2aff71;
+}
 
-/* ------------------------------- LEVELS ----------------------- */
+/*------------------------------------------------ */
+/* YOU WON !!!!!!!!! ----------------------------- */
+/*------------------------------------------------ */
 
-.boxes{
-  background-color: white;
-  padding: 20px;
-  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
-  width: 300px;
-  height: 150px;
-  margin:  20px ;
-  border-radius: 10px; 
+#win {
+  margin-left: 8vw;
+  margin-right: 30%;
+  margin-top: 8vh;
+  padding: 70px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  border: solid 4px #ffffff;
+  align-content: center;
 }
 
-.boxes:hover{
-  border: solid 4px #2aff71;
+#win div {
+  min-height: 500px;
+  min-width: 1000px;
+  margin: 0 auto;
 }
 
-.boxes p {
-  font-family: "Alex Brush";
-  font-size: 30px;
-  margin: 0;
+#win div p {
+  padding: 50px;
+  margin-top: 100px;
 }
 
-#timer {
-  position: fixed;
-  right: 40px;
-  transform: rotate(-4deg);
-  background-color: white;
-  top: 40px;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 2px 5px 40px  rgb(230, 230, 230)
-}
-
-.startgame{
+.butbis {
   padding: 10px 20px;
   background-color: white;
   border-radius: 10px;
@@ -122,12 +72,71 @@ body {
   width: fit-content;
 }
 
-.startgame:hover{
+/*------------------------------------------------ */
+/* GAME OVER ------------------------------------- */
+/*------------------------------------------------ */
+
+.gameover {
+  z-index: 3;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 5px 40px #daf7da;
+  padding: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameover {
+  margin-left: 35%;
+  margin-top: 12%;
+}
+
+.gameover div p:first-child {
+  transform: rotate(4deg);
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  box-shadow: 2px 5px 40px rgb(227, 252, 220);
+  border-radius: 10px;
+  background-color: #2aff71;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/*------------------------------------------------ */
+/* LEVELS SECTION ID ----------------------------- */
+/*------------------------------------------------ */
+
+.startgame {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid black 0.5px;
+  width: fit-content;
+}
+
+.startgame:hover {
   background-color: black;
   color: white;
 }
 
-#niveau{
+#yourturn {
+  z-index: 5;
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  position: absolute;
+  background-image: url("./img/Vector.svg"), url("./img/basdroite.svg"),
+    url("./img/hautgauche.svg"), url("./img/basgauche.svg");
+  background-size: 90%, 20vw, 40vw, 10vw;
+  background-repeat: no-repeat;
+  background-position: center, right -50px bottom -50px, left -80px top -80px,
+    left -20px bottom -30px;
+}
+
+#niveau {
   font-size: 50px;
   font-family: "Abril Fatface";
   font-weight: 800;
@@ -137,43 +146,155 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-#niveau p{
+
+#niveau p {
   padding: 0;
   margin: 0;
 }
 
-#jeu{
+#interne {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 30px;
+  min-height: 500px;
+}
+
+.boxes {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 2px 5px 40px rgb(230, 230, 230);
+  width: 300px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px #ffffff;
+}
+
+.boxes:hover {
+  border: solid 4px #2aff71;
+}
+
+.boxes p {
+  font-family: "Alex Brush";
+  font-size: 30px;
+  margin: 0;
+}
+
+/*------------------------------------------------ */
+/*  ----------------- GAME / PARTIE -------------- */
+/*------------------------------------------------ */
+
+#timer {
+  position: fixed;
+  right: 40px;
+  transform: rotate(-4deg);
+  background-color: white;
+  top: 40px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 2px 5px 40px rgb(230, 230, 230);
+}
+
+#jeu {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
- 
 }
 
+#intitule {
+  font-size: 50px;
+  font-family: "Abril Fatface";
+  font-weight: 600;
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-#computer{
-  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
+#intitule p {
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------------------ */
+/* PLAYER ----------------------------------------- */
+/*------------------------------------------------ */
+
+#warning{
+  padding-top: 10px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* SECTION --------------------------------------- */
+
+.response {
+  margin: 30px;
+}
+
+.response input {
+  border: solid 1px;
+  height: 20px;
+}
+
+/* TEXT It's ur turn ----------------------------- */
+
+#whosturn {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* TEXT Input ------------------------------------ */
+
+#input {
+  border: none;
+  padding: 10px;
+  border-bottom: solid 1px;
+  outline: none;
+}
+
+#player {
+  padding-top: 80px;
+  box-shadow: 2px 5px 40px rgb(230, 230, 230);
   background-color: white;
   margin-right: 50px;
-  width: 300px;
-  height: 300px;
+  margin-left: 50px;
+  width: 400px;
+  height: 320px;
   border-radius: 10px;
+  text-align: center;
+}
 
+/*------------------------------------------------ */
+/* COMPUTER  ----------------------------- */
+/*------------------------------------------------ */
 
-/*
+#computer {
+  padding-top: 80px;
+  box-shadow: 2px 5px 40px rgb(230, 230, 230);
+  background-color: white;
+  margin-right: 50px;
+  margin-left: 50px;
+  width: 400px;
+  height: 320px;
+  border-radius: 10px;
+  text-align: center;
+
+  /*
   text-align: center;
   vertical-align: middle;
   line-height: 288px; cool*/
 }
 
-#player{
-  padding-top: 80px;
-  box-shadow: 2px 5px 40px  rgb(230, 230, 230);
-  background-color: white;
-  margin-left: 50px;
-  width: 300px;
-  height: 220px;
-  border-radius: 10px;
-  text-align: center;
+#reponse {
+  font-size: 40px;
+  font-weight: bold;
 }
